@@ -3,7 +3,7 @@ name: Generate Docs
 on:
   push:
     branches:
-      - main  # Adjust this to your main branch name
+      - main
 
 jobs:
   generate-docs:
@@ -16,13 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14  # Use your preferred Node.js version
+          node-version: 14
 
       - name: Install dependencies
         run: npm install
 
       - name: Generate Docs
-        run: npx jsdoc --configure jsdoc.json  # Adjust command if needed
+        run: npx jsdoc -c jsdoc.conf.json
 
       - name: Commit and Push changes
         run: |

@@ -1,14 +1,33 @@
-name: Generate documentation
+name: Generate Docs
 
 on:
   push:
-    branches: [ "main" ]
-
-  workflow_dispatch:
+    branches:
+      - main  # Adjust this to your main branch name
 
 jobs:
-  build:
+  generate-docs:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Touch file
-        run: ls
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14  # Use your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate Docs
+        run: npx jsdoc --configure jsdoc.json  # Adjust command if needed
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Generate JSDoc documentation"
+          git push

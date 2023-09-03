@@ -30,9 +30,9 @@ It allows access to the created app on native devices via the Expo Go App (by sc
 The main application page will share the same content among all platforms, but the look will be slightly different (iOS, Android, Web).
 
 <div align="center" class="row">
-  <img src="./.github/main_page_images/ios_main_page.jpg" height="350"/>
-  <img src="./.github/main_page_images/android_main_page.png" height="350"/>
-  <img src="./.github/main_page_images/web_main_page.png" height="350"/>
+  <img src="./.github/main_page_images/ios_main_page.jpg" height="300"/>
+  <img src="./.github/main_page_images/android_main_page.png" height="300"/>
+  <img src="./.github/main_page_images/web_main_page.png" height="300"/>
 </div>
 
 After clicking the first button - **Reload model**, the model will be reloaded showing such a screen (iOS):

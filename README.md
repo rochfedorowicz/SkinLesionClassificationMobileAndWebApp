@@ -79,4 +79,4 @@ Installed Node.js - needed for managing packages and for the development server.
 
 ## Code documentation
 
-You can find documentation under: https://rochfedorowicz.github.io/SkinLessionClassificationMobileAndWebApp/
+You can find documentation under: https://rochfedorowicz.github.io/SkinLesionClassificationMobileAndWebApp/
